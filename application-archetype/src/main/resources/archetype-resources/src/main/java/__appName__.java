@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebServlet;
  */
 @WebServlet(name="${appName}",
             urlPatterns={"/rest/*","/js/modules/*","/js/config.js","/log",
-                    "/provenance"},
+                    "/provenance", "/user"},
             description="",
             displayName="${appName}")
 public class ${appName} extends BaseSemantEcoServlet {
