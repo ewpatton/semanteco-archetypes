@@ -12,7 +12,7 @@
   <artifactId>semanteco-archetypes-all</artifactId>
   <version>4.2-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>semanteco archetypes all</name>
+  <name>SemantEco Archetypes</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -46,5 +46,6 @@
   <modules>
     <module>module-archetype</module>
     <module>application-archetype</module>
+    <module>project-archetype</module>
   </modules>
 </project>

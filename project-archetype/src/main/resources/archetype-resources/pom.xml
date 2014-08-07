@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <packaging>pom</packaging>
+  <name>${name}</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>tetherless</id>
+      <url>http://orion.tw.rpi.edu/artifactory/libs-release</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+    <repository>
+      <id>tetherless-snapshots</id>
+      <url>http://orion.tw.rpi.edu/artifactory/libs-snapshot</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
+
+  <modules />
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.7.1.201405082137</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>run-its</id>
+      <activation>
+        <property>
+          <name>run-its</name>
+        </property>
+      </activation>
+      <properties>
+        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+        <sonar.language>java</sonar.language>
+      </properties>
+    </profile>
+  </profiles>
+
+  <distributionManagement>
+    <repository>
+      <id>tetherless</id>
+      <url>https://orion.tw.rpi.edu/artifactory/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>tetherless-snapshots</id>
+      <url>https://orion.tw.rpi.edu/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

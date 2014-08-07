@@ -8,10 +8,10 @@
     <version>4.2-SNAPSHOT</version>
   </parent>
 
-  <artifactId>semanteco-facet-archetype</artifactId>
+  <artifactId>semanteco-module-archetype</artifactId>
   <packaging>maven-archetype</packaging>
 
-  <name>semanteco-facet-archetype</name>
+  <name>Archetype - semanteco-module-archetype</name>
 
   <build>
     <extensions>

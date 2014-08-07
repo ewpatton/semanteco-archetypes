@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+    name="semanteco-project-archetype"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-desscriptor-1.0.0.xsd">
+  <requiredProperties>
+    <requiredProperty key="name" />
+  </requiredProperties>
+  <fileSets>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8">
+      <directory></directory>
+      <include>README.md</include>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
